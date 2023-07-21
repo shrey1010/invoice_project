@@ -37,26 +37,47 @@ Refer to the API documentation for more details on request payloads and response
 To create a new invoice, send a POST request to /invoices/ with the following payload:
 
 json
+
 Copy code
+
 {
+
   "date": "2023-01-01",
+  
   "invoice_no": "INV-001",
+  
   "customer_name": "John Doe",
+  
   "invoice_detail": [
+  
     {
+    
       "description": "Product A",
+      
       "quantity": 2,
+      
       "unit_price": 10.0,
+      
       "price": 20.0
+      
     },
+    
     {
+    
       "description": "Product B",
+      
       "quantity": 3,
+      
       "unit_price": 15.0,
+      
       "price": 45.0
+      
     }
+    
   ]
+  
 }
+
 ## Testing
 To run the test cases, use the following command: python manage.py test
 
